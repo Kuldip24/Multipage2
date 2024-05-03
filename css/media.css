@@ -1,0 +1,242 @@
+@media screen and (min-width: 991px) and (max-width: 1200px)
+{
+    .navbar li
+    {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+}
+@media screen and (min-width: 350px) and (max-width:400px)
+{
+    .logo a img
+    {
+        width: 110px;
+        height: auto;
+    }
+}
+@media screen and (max-width: 349px)
+{
+    .logo a img
+    {
+        width: 80px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width:991px)
+{
+    .about_box
+    {
+        padding: 20px 30px;
+    }
+    .blog_head
+    {
+        padding: 0;
+    }
+    .p_box
+    {
+        padding: 0;
+    }
+    .slider1_cont h2 
+    {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width:767px)
+{
+    #founder
+    {
+        padding: 54px 0;
+        margin-bottom: 54px;
+    }
+    .founder_box
+    {
+        margin: 0;
+    }
+    .help_img1
+    {
+        margin: 0;
+    }
+    #abouthelp
+    {
+        padding: 0;
+    }
+    .team_heading
+    {
+        padding: 0;
+        margin: 54px 0;
+    }
+    .slider1_cont h2 
+    {
+        font-size: 30px;
+    }
+    .slider1_cont .web_btn
+    {
+        padding: 14px 18px;
+    }
+    #help
+    {
+        padding: 54px 0;
+    }
+    .text_h2
+    {
+        font-size: 2.5rem;
+    }
+    .about_box
+    {
+        margin: 10px 0;
+    }
+    #about
+    {
+        padding-top: 52px;
+    }
+    .about_p
+    {
+        margin-bottom: 60px;
+    }
+    .parralax
+    {
+        margin-top: 54px;
+    }
+    #practice_areas
+    {
+        padding: 30px 0;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:360px)
+{
+    .slider1_cont h2
+    {
+        font-size: 20px;
+    }
+    .slider1_cont p
+    {
+        display: none;
+    }
+    .slider1_cont h2
+    {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .slider1_cont p
+    {
+        display: none;
+    }
+    .slider1_cont .web_btn
+    {
+        padding: 10px;
+        font-size: 10px;
+    }
+    .about_box
+    {
+        margin: 10px 0;
+    }
+    #about
+    {
+        padding-top: 52px;
+    }
+    .text_h2
+    {
+        font-size: 2.5rem;
+    }
+    #help
+    {
+        padding: 54px 0;
+        margin-bottom: 54px;
+    }
+    .blog_head h2
+    {
+        margin: 0 0 24px;
+    }
+    .about_p
+    {
+        margin-bottom: 60px;
+    }
+    .parralax
+    {
+        margin-top: 54px;
+    }
+}
+@media only screen and (min-width:360px) and (max-width:479px)
+{
+    .slider1_cont h2
+    {
+        font-size: 26px;
+        margin-top: 10px;
+    }
+    .slider1_cont p
+    {
+        display: none;
+    }
+    .slider1_cont .web_btn
+    {
+        padding: 10px;
+        font-size: 11px;
+        margin-top: 10px;
+    }
+    .about_box
+    {
+        margin: 10px 0;
+    }
+    .text_h2
+    {
+        font-size: 2.5rem;
+    }
+    #help
+    {
+        padding: 54px 0;
+        margin-bottom: 54px;
+    }
+    .about_p
+    {
+        margin-bottom: 60px;
+    }
+}
+@media only screen and (min-width:480px) and (max-width:600px)
+{
+    .slider1_cont h2
+    {
+        font-size: 30px;
+        line-height: 2.7rem;
+    }
+    .slider1_cont p
+    {
+        display: none;
+    }
+    .slider1_cont .web_btn
+    {
+        padding: 10px;
+        font-size: 11px;
+        margin-top: 10px;
+    }
+    .text_h2
+    {
+        font-size: 2.5rem;
+    }
+    #help
+    {
+        padding: 54px 0;
+        margin-bottom: 54px;
+    }
+    .about_box
+    {
+        margin: 10px 0;
+    }
+    .about_p
+    {
+        margin-bottom: 60px;
+    }
+}
+@media only screen and (max-width:1000px)
+{
+    .practice_areas_box
+    {
+        padding: 30px;
+    }
+    .practice_areas_box .text_h2
+    {
+        font-size: 40px;
+    }
+}

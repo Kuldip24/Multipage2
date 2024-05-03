@@ -1,0 +1,720 @@
+/* libre-baskerville-regular - latin */
+/* libre-baskerville-regular - latin */
+@font-face 
+{
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/libre-baskerville-v14-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* libre-baskerville-700 - latin */
+@font-face 
+{
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/libre-baskerville-v14-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* -------------------------------------------------------------------------------------- */
+/* ---------------------------------- Custom Css Start ----------------------------- */
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    font-family: 'Source Sans Pro';
+    font-size: 18px;
+    color: #656565;
+}
+:root
+{
+    --Libre-Baskerville: 'Libre Baskerville';
+    --white: #FFFFFF;
+    --theme-color: #d50f2f;
+    --theme-hover: #E14F66;
+}
+h1,h2,h3,h4,h5,h6
+.h1,.h2,.h3,.h4,.h5,.h6
+{
+    font-family: var(--Libre-Baskerville);
+
+}
+ul,li
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a
+{
+    text-decoration: none;
+    color: inherit;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+p,span
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+p
+{
+    line-height: 1.7;
+    font-size: 17px;
+}
+.web_btn
+{
+    color: white;
+    background-color: var(--theme-color);
+    text-transform: uppercase;
+    padding: 14px 25px;
+    font-size: 13px;
+    letter-spacing: 2;
+    font-weight: 600;
+    display: block;
+    width: max-content;
+    font-family: var(--Libre-Baskerville);
+    &:hover
+    {
+        background-color: var(--theme-hover);
+        transition: all 1s cubic-bezier(.25,1,.35,1) 0s;
+        cursor: pointer;
+    }
+}
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+.theme-color
+{
+    color: var(--theme-color);
+}
+.hover-color
+{
+    color: var(--theme-hover);
+}
+/* ---------------------------------- Custom Css End ----------------------------- */
+
+/* ---------------------------------- Header Section Start ----------------------------- */
+header
+{
+    position: absolute;
+    width: 100%;
+    z-index: 10;  
+}
+.sticky 
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+} 
+.logo a img
+{
+    width: 140px;
+}
+.navbar li
+{
+    margin-left: 24px;
+    font-size: clamp(10px , 4vw ,16px);
+    position: relative;
+}
+.navbar li a
+{
+    padding: 30px 0;
+    color: var(--white);
+    display: block;
+    position: relative;
+    font-size: 15px;
+    &:hover
+    {
+        color: var(--theme-color);
+        transition: all .5s cubic-bezier(.25,1,.35,1) 0s;
+        cursor: pointer;
+    }
+}
+.navbar li a::before
+{
+    position: absolute;
+    bottom: 30px;
+    right: 50%;
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: var(--theme-color);
+    opacity: 0;
+    transition: all .5s cubic-bezier(.25,1,.35,1) 0s;
+}
+.navbar li a::after
+{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: var(--theme-color);
+    opacity: 0;
+    transition: all .5s cubic-bezier(.25,1,.35,1) 0s;
+
+}
+.navbar li a:hover::before
+{
+    opacity: 1;
+    width: 50%;
+}
+.navbar li a:hover::after
+{
+    opacity: 1;
+    width: 50%;
+}
+.navbar li:first-child
+{
+    margin-left: 0;
+}
+.submenu
+{
+    position: absolute;
+    top: 78px;
+    left: -36px;
+    width: 265px;
+    background-color: black;
+    box-shadow: 1px 1px 15px 0 rgba(0,0,0,.05);
+    padding: 28px 0;
+    text-align: left;
+    display: none;
+}
+.submenu li
+{
+    margin: 0;
+    padding: 0;
+}
+.submenu li a:hover::before
+{
+    width: 0!important;
+}
+.submenu li a:hover::after
+{
+    width: 0!important;
+}
+
+.submenu li a
+{
+    padding: 8px 36px;
+    color: #FFF;
+    display: block;
+    transition: all .5s cubic-bezier(.25,1,.35,1) 0s;
+    text-transform: uppercase;
+    &:hover
+    {
+        transform: translate(12px);
+        border: none!important;
+    }
+}
+.navbar li:hover .submenu
+{
+    display: block;
+}
+.header-btn a
+{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    display: block;
+}
+.header-btn
+{
+    background-color: var(--theme-color);
+    &:hover
+    {
+        background-color: var(--theme-hover);
+        transition: all 1s cubic-bezier(.25,1,.35,1) 0s;
+    }
+}
+.header_socials
+{
+    margin-left: 32px;
+}
+.header_socials li a:hover
+{
+    color: #29c5f6;
+    transition: all 1s cubic-bezier(.25,1,.35,1) 0s;
+}
+.mobile_menu
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: #000;
+    transition: all .7s cubic-bezier(.25,1,.35,1) 0s;
+    padding: 0 30px;
+    flex-direction: column;
+    display: none;
+}
+.mobile_menu li
+{
+    width: 100%;
+    padding-left: 48px;
+    &:hover
+    {
+        color: var(--theme-color);
+    }
+}
+.mobile_menu li a{
+    width: 100%;
+    text-align: left;
+    color: white!important;
+    padding: 10px 0;
+    display: inline-block;
+    font-weight: 500;
+}
+.exit_menu
+{
+    margin-top: 32px;
+    cursor: pointer;
+    padding-left: 0!important;
+}
+.mobile_peta_menu
+{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #212529;
+    display: none;
+}
+.mobile_menu li:hover .mobile_peta_menu
+{
+    display: block;
+}
+/* ---------------------------------- Header Section Start ----------------------------- */
+/* ---------------------------------- Banner Section Start ----------------------------- */
+#banner:hover
+{
+    cursor: grab;
+}
+.slider1_box
+{
+    height: 80vh;
+}
+.slider1_box img
+{
+   object-fit: cover;
+    display: block;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.slider1_box::before
+{
+    content: '';
+    background: rgba(14, 18, 25, .3);
+    top: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index:  1;
+}
+.slider1_cont
+{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+}
+.slider1_cont h2
+{
+    font-size: 3.5rem;
+    font-family: Libre Baskerville,sans-serif;
+}
+.owl-carousel .owl-nav button.owl-prev
+{
+    left: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 100px;
+    font-weight: 100;
+    color: white;
+}
+.owl-carousel .owl-nav button.owl-next
+{      
+    right: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 100px;
+    font-weight: 100;
+    color: white;
+}     
+.owl-theme .owl-nav [class*=owl-]:hover
+{
+    background-color: transparent;
+}
+/* ---------------------------------- Banner Section End ----------------------------- */
+/* ---------------------------------- About Section Start ----------------------------- */
+.text_span{
+    border-bottom: 3px solid var(--theme-color);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--theme-color);
+    letter-spacing: .05em;
+}
+.text_h2
+{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 15px;
+}
+.about_head
+{
+    margin-bottom: 20px;
+}
+#about 
+{
+    padding: 100px 0;
+}
+#about p
+{
+    line-height: 1.7;
+    font-size: 17px;
+}
+.about_box i
+{
+    font-size: 50px;
+    color: var(--theme-color);
+}
+.about_box
+{
+    background-color: #FFF4F6;
+    padding: 50px;
+    margin-top: 60px;
+}
+.text_h5
+{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: black;
+    line-height: 1.2em;
+    margin-top: 20px;
+}
+.about_box p
+{
+    margin: 20px 0;
+}
+.about_btn button
+{
+    color: white;
+    background-color: var(--theme-color);
+    padding: 12px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: var(--Libre-Baskerville);
+    &:hover
+    {
+        background-color: var(--theme-hover);
+        transition: all 1s cubic-bezier(.25,1,.35,1) 0s;
+    }
+}
+/* ---------------------------------- About Section End ----------------------------- */
+/* ---------------------------------- Team Section Start ----------------------------- */
+.team_cont
+{
+    padding-top: 20px;
+}
+.team_cont span
+{
+    font-size: 12px;
+    border-bottom: none;
+}
+
+/* ---------------------------------- Team Section End ----------------------------- */
+/* ---------------------------------- Help Section Start ----------------------------- */
+#help
+{
+    background-color: #fff4f6;
+    padding: 108px 0;
+    margin-bottom: 98px;
+}
+/* ---------------------------------- Team Section End ----------------------------- */
+/* ---------------------------------- Blog Section Start ----------------------------- */
+.blog_head
+{
+    padding: 0 150px;
+}
+.blog_img
+{
+    margin-bottom: 32px;
+    overflow: hidden;
+}
+.blog_img:hover img
+{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.blog_img img
+{
+    transition: transform 1s cubic-bezier(.5,.5,0,.995),-webkit-transform 1s cubic-bezier(.5,.5,0,.995);
+}
+.blog_cont p
+{
+    margin-bottom: 42px;
+}
+/* ---------------------------------- Blog Section End ----------------------------- */
+/* ---------------------------------- Parralax Section Start ----------------------------- */
+#parralax
+{
+    padding: 90px 0;
+    position: relative;
+}
+#parralax::before
+{
+    position: absolute;
+    content: '';
+    background-color: #000;
+    top: 0;
+    left: 0;
+    opacity: .3;
+    height: 100%;
+    width: 100%;
+}
+/* ---------------------------------- Parralax Section End ----------------------------- */
+/* ---------------------------------- Footer Section End ----------------------------- */
+footer
+{
+    padding: 110px 0 60px 0;
+}
+.footer_icn i
+{
+    color: var(--theme-color);
+    font-size: 25px;
+}
+footer .p_text
+{
+    font-size: 14px;
+}
+/* ---------------------------------- Footer Section End ----------------------------- */
+
+/* about section start */
+.counter_icn i
+{
+    font-size: 40px;
+}
+.counter_txt h1
+{
+    font-size: 54px;
+    font-weight: 700;
+}
+.counter_txt h6
+{
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+}
+/* about section end */
+/* founder section start */
+#founder
+{
+    padding: 108px 0;
+    margin-top: 130px;
+    margin-bottom: 98px;
+    background-color: #fff4f6;
+}
+.founder_box
+{
+    margin: -150px 30px 0 0;
+}
+/* founder section end */
+
+/* help section start */
+.help_ul li
+{
+    padding-left: 16px;
+}
+.help_ul li::before
+{
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: #d50f2f;
+    top: 50%;
+    left: 0;
+    transform: translatey(-50%);
+    border-radius: 50%;
+}
+.help_img1
+{
+    margin: 0 54px 0 0;
+}
+/* help section end */
+
+/* get in touch section start */
+#get_in_touch
+{
+    padding-top: 108px;
+    padding-bottom: 30px;
+}
+.input_box
+{
+    margin-bottom: 24px;
+}
+.input_box .input_txt
+{
+    width: 100%;
+    padding: 18px 24px;
+    border: 1px solid #1c2e40;
+    border-radius: 3px;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+}
+/* get in touch section end */
+
+/* practice areas section start */
+#practice_areas
+{
+    padding: 98px 0;
+}
+.practice_areas_box
+{
+    background-color: #FFF4F6;
+}
+.practice_icn i
+{
+    font-size: 45px;
+    color: var(--theme-color);
+}
+.practice_areas_box
+{
+    padding: 50px 0 50px 54px;
+}
+.practice_areas_box li
+{
+    display: flex;
+    position: relative;
+}
+.practice_areas_box ul li .icn_box
+{
+    margin-right: 15px;
+    background-color: #d50f2f;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+}
+.practice_areas_box ul li .icn_box i
+{
+    color: var(--white);
+    font-size: 12px;
+}
+.practice_areas_box ul li p
+{
+    margin-bottom: 5px;
+}
+/* practice areas section end */
+/* team section start */
+.team_heading
+{
+    padding: 0 150px;
+    margin: 98px 0;
+}
+/* team section end */
+/* faq accordian section start */
+.faq_accordian
+{
+    margin: 98px 0;
+}
+.faq_right
+{
+    padding: 0 20px;
+}
+#faq__accordian-main-wrapper {
+  max-width: 100%;
+  border: 1px solid #d5d8dc;
+}
+.faq__accordion-content p {
+	margin: 0;
+}
+.faq__accordion-wrapper:hover .faq__accordian-heading
+{
+    color: red;
+    transition: all 1s cubic-bezier(.25,1,.35,1) 0s;
+}
+.faq__accordian-heading {
+	padding: 10px 30px 10px 45px;
+	display: block;
+	position: relative;
+    border: 1px solid #d5d8dc;
+	font-weight: 700;
+	color: #000000;
+}
+.faq__accordian-heading::before {
+	content: "+";
+	color: #000;
+	font-family: 'fontawesome';
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	transition: 0.3s linear all;
+	transform: translateY(-50%);
+}
+.faq__accordian-heading i
+{
+    content: "";
+	color: #000;
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.faq__accordian-heading.active::before {
+    display: none;
+}
+.faq__accordian-heading.active::before {
+	color: #ffffff;
+}
+.faq__accordion-content {
+	display: none;
+	padding: 10px 20px;
+}
+.p_box
+{
+    padding: 0 200px;
+}
+/* faq accordian section end */
+/* contact banner section start */
+.contact_map_icon
+{
+    font-size: 24px;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--theme-color);
+    margin-bottom: 10px;
+}
+/* contact banner section start */
+header
+{
+
+    transition: all .5s cubic-bezier(.25,1,.35,1) 0s;
+}
+.map
+{
+    max-width: 100%;
+    width: 100%;
+}
