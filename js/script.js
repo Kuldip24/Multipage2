@@ -1,5 +1,16 @@
 $(document).ready(function(){
 
+  // add active class
+  $('.navbar li a').click(function(){
+    $('.navbar li a').removeClass('.active');
+    $(this).addClass('.active');
+  })
+
+  $('.mobile_menu li a').click(function(){
+    $('.mobile_menu li a').removeClass('.active');
+    $(this).addClass('.active');
+  })
+
     // banner section start (owl-carousel) #slider1
   $('#slider1').owlCarousel({
     items: 1,
@@ -20,7 +31,6 @@ $(document).ready(function(){
         }
     }
  });
- 
   // banner section end
 
 
@@ -43,7 +53,7 @@ function myFunction() {
   }
 }
 
-
+// accordian-------------
 jQuery('.faq__accordian-heading').click(function(e){
   e.preventDefault();
   if (!jQuery(this).hasClass('active')) {
@@ -57,6 +67,9 @@ jQuery('.faq__accordian-heading').click(function(e){
       jQuery(this).next('.faq__accordion-content').slideUp(500);
   }
 });
+
+
+
 
 
 
